@@ -11,10 +11,11 @@ export function getQuote() {
         axios  
             .get('https://quote-garden.herokuapp.com/quotes/random')
             .then(res => {
-                dispatch({ type: GET_QUOTE_SUCCESS, payload: res.data.quoteText})
+                console.log(res.data)
+                dispatch({ type: GET_QUOTE_SUCCESS, payload: res.data.quoteText })
             })
             .catch(err => {
-                dispatch({ type: GET_QUOTE_FAILURE, payload: err})
+                dispatch({ type: GET_QUOTE_FAILURE, payload: err })
             })
     }
 }
