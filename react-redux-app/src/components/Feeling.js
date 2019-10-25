@@ -4,7 +4,7 @@ import { toggleEditing, updateFeeling } from '../actions/feeling';
 
 
 function Feeling (props) {
-    const [feeling] = useState('neutral');
+    const [feeling, setFeeling] = useState();
 
     const handleEdit = e => {
         e.preventDefault();
@@ -13,13 +13,13 @@ function Feeling (props) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        updateFeeling('');
+        setFeeling('');
         props.updateFeeling(feeling || props.feeling)
         props.toggleEditing();
     }
 
     const handleChanges = e => {
-        updateFeeling(e.target.value);
+        setFeeling(e.target.value);
     }
     return (
         <div>
