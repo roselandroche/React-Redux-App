@@ -28,8 +28,8 @@ function Feeling (props) {
                     <input
                         type='text'
                         name='feeling'
-                        placeholder='props.feeling'
-                        value={props.feeling}
+                        placeholder='feeling'
+                        value={feeling}
                         onChange={handleChanges}
                     />
                     <button type='submit'>Save</button>
