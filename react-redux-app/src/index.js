@@ -7,15 +7,15 @@ import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import { reducer as feelingReducer } from './reducers/feeling';
-import { reducer as quoteReducer } from './reducers/quote';
+// import { reducer as quoteReducer } from './reducers/quote';
 
 
-const rootReducer = combineReducers({
-    feeling: feelingReducer,
-    quote: quoteReducer
-})
+// const reducer = combineReducers({
+//     feeling: feelingReducer
+//     quote: quoteReducer
+// });
 
-const store = createStore(rootReducer, applyMiddleware(thunk, logger))
+const store = createStore(feelingReducer, applyMiddleware(thunk, logger))
 
 ReactDOM.render(
     <Provider store={store}>

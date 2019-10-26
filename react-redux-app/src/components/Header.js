@@ -1,6 +1,7 @@
 import React from 'react';
 import Feeling from './Feeling';
 import roseSelfie from './img/roseSelfie.jpg';
+import Quote from './Quote';
 
 function Header() {
     return (
@@ -9,6 +10,7 @@ function Header() {
             <img src={roseSelfie} alt='Selfie of Rose' />
             <h2>Lambda Student <br /> studying Full Stack Web Development</h2>
             <Feeling />
+            <Quote />
         </div>
     )
 }
