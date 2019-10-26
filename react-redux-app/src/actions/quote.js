@@ -12,7 +12,7 @@ export function getQuote() {
             .get('https://quote-garden.herokuapp.com/quotes/random')
             .then(res => {
                 console.log(res.data)
-                dispatch({ type: GET_QUOTE_SUCCESS, payload: res.data.quoteText })
+                dispatch({ type: GET_QUOTE_SUCCESS, payload: res.data })
             })
             .catch(err => {
                 dispatch({ type: GET_QUOTE_FAILURE, payload: err })
