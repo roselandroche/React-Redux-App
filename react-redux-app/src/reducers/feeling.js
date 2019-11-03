@@ -4,7 +4,7 @@ import { GET_QUOTE_START, GET_QUOTE_SUCCESS, GET_QUOTE_FAILURE } from '../action
 const initialState = {
     feeling: 'neutral',
     editing: false,
-    quote: 'Default value',
+    quote: '',
     isLoading: false,
     error: null
 }

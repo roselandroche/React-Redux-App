@@ -5,6 +5,7 @@ export const GET_QUOTE_SUCCESS = 'GET_QUOTE_SUCCESS';
 export const GET_QUOTE_FAILURE = 'GET_QUOTE_FAILURE';
 
 export function getQuote() {
+    
     return dispatch => {
         dispatch({ type: GET_QUOTE_START});
 

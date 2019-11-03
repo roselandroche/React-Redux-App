@@ -2,19 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import { reducer as feelingReducer } from './reducers/feeling';
-// import { reducer as quoteReducer } from './reducers/quote';
+import { reducer } from './reducers/feeling';
 
-
-const reducer = combineReducers({
-    feeling: feelingReducer
-});
-
-const store = createStore(feelingReducer, applyMiddleware(thunk, logger))
+const store = createStore( reducer, applyMiddleware(thunk, logger))
 
 ReactDOM.render(
     <Provider store={store}>
