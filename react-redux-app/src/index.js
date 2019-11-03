@@ -10,10 +10,9 @@ import { reducer as feelingReducer } from './reducers/feeling';
 // import { reducer as quoteReducer } from './reducers/quote';
 
 
-// const reducer = combineReducers({
-//     feeling: feelingReducer
-//     quote: quoteReducer
-// });
+const reducer = combineReducers({
+    feeling: feelingReducer
+});
 
 const store = createStore(feelingReducer, applyMiddleware(thunk, logger))
 

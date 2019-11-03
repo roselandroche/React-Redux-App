@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Quote() {
+function Quote(props) {
     return (
         <div className='quote'>
             <h3>Quote of the Day: {props.quote}</h3>
